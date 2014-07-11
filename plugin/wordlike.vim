@@ -65,39 +65,10 @@ set nonumber
 set wrapmargin=0
 set textwidth=0
 
-"
-
 " =======================================================
 "  5 syntax, highlighting and spelling
 " =======================================================
 syntax enable 
-
-" Allow files to specify what their highlight mode is.
-set modeline
-" i.e.:
-" # vi: syntax=apache
-
-
-" Autocommands are commented out due to speed concerns:
-"   I generally just use modeline instead for obscure types.
-"
-" Display .conf as INI                   
-" au BufReadPost *.conf set ft=dosini
-
-" Markdown
-" au BufWinEnter *.{md,mdown,mkd,mkdn,markdown,mdwn}   set filetype=mkd
-
-" Salt SLS files are YAML
-" au BufWinEnter *.sls setlocal expandtab
-" au BufWinEnter *.sls setlocal tabstop=2
-" au BufWinEnter *.sls setlocal shiftwidth=2
-" au BufWinEnter *.sls setlocal textwidth=0
-
-" Ansible YML files are YAML
-" au BufWinEnter *.yml setlocal expandtab
-" au BufWinEnter *.yml setlocal tabstop=2
-" au BufWinEnter *.yml setlocal shiftwidth=2
-" au BufWinEnter *.yml setlocal textwidth=0
 
 " =======================================================
 "  6 multiple windows
@@ -298,7 +269,6 @@ set clipboard=unnamed
 " Some generally useful settings
 " -----------------------------------------------------------------------
 
-
 hi Comment ctermfg=cyan
 
 " Righ-click in Gvim should pop up for copy
@@ -317,19 +287,3 @@ syntax on
 " set syntax=rst
 " au BufNewFile,BufRead *.txt set syntax=rst
 " au BufNewFile,BufRead *.txt set filetype=rst
-au BufReadPost *.txt set filetype=rst
-" au BufRead *.txt echo "Foo!"
-au BufRead *.txt set syntax=rst 
-
-" Vagrant configs are YAML
-au BufRead Vagrantfile set syntax=yaml
-au BufRead Vagrantfile set tabstop=2
-au BufRead Vagrantfile set shiftwidth=2
-au BufRead Vagrantfile set expandtab
-" YML files are YAML
-au BufRead *.yml set syntax=yaml
-au BufRead *.yml set tabstop=2
-au BufRead *.yml set shiftwidth=2
-au BufRead *.yml set expandtab
-
-
