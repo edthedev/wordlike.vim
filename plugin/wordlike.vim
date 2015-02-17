@@ -20,7 +20,7 @@
 " =======================================================
 
 " Let the leader key be ,  
-let mapleader=","
+" let mapleader=","
 
 " =======================================================
 "  2 moving around, searching and patterns
@@ -34,8 +34,8 @@ set incsearch "Search as I type
 " =======================================================
 "
 " Generate the .tags file.
-map <Leader>gt :!ctags --file-scope=no --python-kinds=-iv -R -f .tags .
-set tags=.tags;/
+" map <Leader>gt :!ctags --file-scope=no --python-kinds=-iv -R -f .tags .
+" set tags=.tags;/
 
 " =======================================================
 "  4 displaying text
@@ -78,7 +78,7 @@ syntax enable
 set hidden
 
 " Show open buffers
-:map <Leader>b :buffers<Cr>
+" :map <Leader>b :buffers<Cr>
 
 " Reminders:
 "   :bn, :bc
@@ -157,8 +157,6 @@ filetype plugin indent on
 " 17 mapping
 " =======================================================
 
-" iPad and Android keyboards have no ESC Key
-inoremap ii <esc>
 " Tired of typing :Wq
 cnoreabbrev W w
 
@@ -180,7 +178,7 @@ set directory=./.backup,/tmp
 " =======================================================
 
 " ex mode commands made easy
-nnoremap ; :
+" nnoremap ; :
 
 " :map <Leader>pc :!check-script %:p:h/%<Cr>
 ":map <Leader>pc :!hg ci%<Cr>
@@ -190,15 +188,15 @@ nnoremap ; :
 " :map <Leader>pl :!pylib 
 
 " Convert to HTML
-map <leader>ch :!make html 
+" map <leader>ch :!make html 
 
 " Convert to PDF
-map <leader>cp :!rst2pdf % > %:r.pdf;evince %:r.pdf &<Cr>
+" map <leader>cp :!rst2pdf % > %:r.pdf;evince %:r.pdf &<Cr>
 
 " Scratch Buffer
-map <F7> :badd %:r-scratch.%:e
+"map <F7> :badd %:r-scratch.%:e
 " Slides! 
-map <leader>cs :!rst2slides % %:r.html;firefox %:r.html &<Cr>
+" map <leader>cs :!rst2slides % %:r.html;firefox %:r.html &<Cr>
 " View Slides! 
 " map <leader> :!firefox %:r.html &<Cr>
 
@@ -210,7 +208,7 @@ map <Leader>f :!grep <C-r><C-w> . -R -A1 -B1 -n <bar> grep -v .svn <bar> grep -v
 " map <Leader>d :w !diff % -<Cr>
 
 " Run!
-map <F10> :!%
+" map <F10> :!%
 
 " map <F11> :!touch %:r.scratch.%:t <bar> :badd %:r.scratch.%:t<Cr>
 " map <Leader>os :badd %:r.scratch.%:t<Cr>
@@ -218,21 +216,21 @@ map <F10> :!%
 " :map <Leader>pr :!sudo /etc/init.d/apache2 restart<Cr>
 
 " Sort lines!!
-:map <Leader>ss :'<,'> !sort<Cr>
+" :map <Leader>ss :'<,'> !sort<Cr>
 
 " -----------------------------------------------------------------
 "    Wiki link stuff
 " -----------------------------------------------------------------
-map <Leader>ll :e <cfile><cr>
-map <Leader>lw :e $HOME/Dropbox/notes<cr>
-map <Leader>lh :e $HOME/Dropbox/notes<cr>
-map <Leader>lb :buffers<Cr>
+" map <Leader>ll :e <cfile><cr>
+" map <Leader>lw :e $HOME/Dropbox/notes<cr>
+" map <Leader>lh :e $HOME/Dropbox/notes<cr>
+" map <Leader>lb :buffers<Cr>
 "map ,lj :bp<Cr>
 "map ,lk :bn<Cr>
 
 "      Send stuff to Wordpress
 " -----------------------------------------------------------------
-map <Leader>tw :!$HOME/.vim/bundle/vim-rst/bin/text-send-to-wordpress %<Cr>
+" map <Leader>tw :!$HOME/.vim/bundle/vim-rst/bin/text-send-to-wordpress %<Cr>
 
 " map <leader>w :!nautilus ~/Dropbox/notes/wiki >/dev/null 2>&1<Cr>
 " map <leader>ow :!ranger ~/Dropbox/notes/wiki<Cr>
@@ -241,7 +239,7 @@ map <Leader>tw :!$HOME/.vim/bundle/vim-rst/bin/text-send-to-wordpress %<Cr>
 " map <leader>ob :!ranger .<Cr>
 
 " Copy entire document to clipboard.
-map <leader>xc :!cat % <bar> xclip -sel c
+" map <leader>xc :!cat % <bar> xclip -sel c
 
 " Shared Clipboard
 set clipboard=unnamed
