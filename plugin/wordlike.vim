@@ -285,3 +285,16 @@ syntax on
 " set syntax=rst
 " au BufNewFile,BufRead *.txt set syntax=rst
 " au BufNewFile,BufRead *.txt set filetype=rst
+" au BufReadPost *.txt set filetype=rst
+" au BufRead *.txt set syntax=rst 
+
+"" Vagrant configs are YAML
+"au BufRead Vagrantfile set syntax=yaml
+"au BufRead Vagrantfile set tabstop=2
+"au BufRead Vagrantfile set shiftwidth=2
+"au BufRead Vagrantfile set expandtab
+"" YML files are YAML
+"au BufRead *.yml set syntax=yaml
+"au BufRead *.yml set tabstop=2
+"au BufRead *.yml set shiftwidth=2
+"au BufRead *.yml set expandtab
